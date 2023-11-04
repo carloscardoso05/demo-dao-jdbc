@@ -18,10 +18,15 @@ public class Main {
         System.out.println("\n---- TEST 2: seller findByDepartment ----");
         Department dep = new Department(1, null);
         List<Seller> sellers = sellerDao.findByDepartment(dep);
-        System.out.println(sellers);
+        for (Seller sel : sellers) {
+            System.out.println(sel);
+        }
 
         System.out.println("\n---- TEST 3: seller findAll ----");
-        System.out.println(sellerDao.findAll());
+        sellers = sellerDao.findAll();
+        for (Seller sel : sellers) {
+            System.out.println(sel);
+        }
 
     }
 }
